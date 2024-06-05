@@ -12,7 +12,7 @@ namespace BlazorRDLCReport.Server.Controllers
     public class ReportController : ControllerBase
     {
         private readonly IWebHostEnvironment _webHostEnvironment;
-        private readonly EmployeeService _employeeService;
+        private readonly EmployeeService _employeeService=new EmployeeService();
         public ReportController(IWebHostEnvironment _webHostEnvironment)
         {
             this._webHostEnvironment = _webHostEnvironment;

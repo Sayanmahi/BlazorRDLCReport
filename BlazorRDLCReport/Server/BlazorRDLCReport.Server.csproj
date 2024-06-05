@@ -7,12 +7,33 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\Reports\dsEmployee.Designer.cs" />
+    <Content Remove="wwwroot\Reports\dsEmployee.xsc" />
+    <Content Remove="wwwroot\Reports\dsEmployee.xsd" />
+    <Content Remove="wwwroot\Reports\dsEmployee.xss" />
+    <Content Remove="wwwroot\Reports\Report1.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="wwwroot\Reports\dsEmployee.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsEmployee.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="wwwroot\Reports\Report1.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="AspNetCore.Reporting" Version="2.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.26" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.31" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.31" />
     <PackageReference Include="System.CodeDom" Version="6.0.0" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
+    <PackageReference Include="System.Security.Permissions" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -21,7 +42,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\Reports\" />
+    <None Include="wwwroot\Reports\dsEmployee.xsc" />
+    <None Include="wwwroot\Reports\dsEmployee.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dsEmployee.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Include="wwwroot\Reports\dsEmployee.xss" />
   </ItemGroup>
 
 
