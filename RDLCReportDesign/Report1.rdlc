@@ -56,19 +56,19 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>0.60167in</Width>
+                  <Width>0.37267in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.41in</Width>
+                  <Width>0.806in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.60167in</Width>
+                  <Width>1.006in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.685in</Width>
+                  <Width>0.731in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.11833in</Width>
+                  <Width>0.756in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -406,10 +406,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>dsEmployee</DataSetName>
-            <Top>0.06944in</Top>
-            <Left>0.34667in</Left>
+            <Top>0.2in</Top>
+            <Left>0.88566in</Left>
             <Height>0.5in</Height>
-            <Width>6.41667in</Width>
+            <Width>3.67167in</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -479,8 +479,9 @@
               </Paragraphs>
               <rd:DefaultName>param</rd:DefaultName>
               <Top>0.47167in</Top>
+              <Left>1.09167in</Left>
               <Height>0.25in</Height>
-              <Width>6.57167in</Width>
+              <Width>4.44667in</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
@@ -520,8 +521,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>PageNumber</rd:DefaultName>
-              <Top>0.06944in</Top>
-              <Left>5.76333in</Left>
+              <Top>0.05556in</Top>
+              <Left>5.17166in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
               <Style>
@@ -550,6 +551,7 @@
               </Paragraphs>
               <rd:DefaultName>ExecutionTime</rd:DefaultName>
               <Top>0.06944in</Top>
+              <Left>0.25833in</Left>
               <Height>0.25in</Height>
               <Width>1in</Width>
               <ZIndex>1</ZIndex>
@@ -581,9 +583,9 @@
   <ReportParameters>
     <ReportParameter Name="param">
       <DataType>String</DataType>
+      <Nullable>true</Nullable>
       <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
-      <MultiValue>true</MultiValue>
     </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>

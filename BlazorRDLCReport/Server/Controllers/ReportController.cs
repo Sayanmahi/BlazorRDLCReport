@@ -28,7 +28,7 @@ namespace BlazorRDLCReport.Server.Controllers
             var path = $"{this._webHostEnvironment.WebRootPath}\\Reports\\Report1.rdlc";
 
             Dictionary<string, string> parameter = new Dictionary<string, string>();
-            parameter.Add("param", "RDLC Report in Blazor web Assembly");
+            parameter.Add("params", "RDLC Report in Blazor web Assembly");
             LocalReport localReport = new LocalReport(path);
             localReport.AddDataSource(dataSetName: "dsEmployee", dt);
 
@@ -41,7 +41,7 @@ namespace BlazorRDLCReport.Server.Controllers
             else
             {
                 var result = localReport.Execute(RenderType.Excel,extension,parameter,mimeType);
-                return (File(result.MainStream, contentType: "application/xls"));
+                return (File(result.MainStream, contentType: "application/xls",fileDownloadName:"MyFile.xls"));
             }
         }
     }
