@@ -13,6 +13,7 @@ namespace BlazorRDLCReport.Server.Controllers
     {
         private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly EmployeeService _employeeService=new EmployeeService();
+        private readonly WyndhamService _wyndhamService=new WyndhamService();
         public ReportController(IWebHostEnvironment _webHostEnvironment)
         {
             this._webHostEnvironment = _webHostEnvironment;
@@ -43,6 +44,20 @@ namespace BlazorRDLCReport.Server.Controllers
                 var result = localReport.Execute(RenderType.Excel,extension,parameter,mimeType);
                 return (File(result.MainStream, contentType: "application/xls",fileDownloadName:"MyFile.xls"));
             }
+        }
+        [HttpGet("[action]")]
+        public IActionResult GetCharges()
+        {
+            var dt = new DataTable();
+            dt = _wyndhamService.Charges();
+            return Ok(dt);
+        }
+        [HttpGet("[action]")]
+        public IActionResult GetPayment()
+        {
+            var dt = new DataTable();
+            dt = _wyndhamService.Payment();
+            return Ok(dt);
         }
     }
 }
