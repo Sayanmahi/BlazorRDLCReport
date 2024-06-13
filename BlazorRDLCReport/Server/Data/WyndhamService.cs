@@ -29,18 +29,18 @@ namespace BlazorRDLCReport.Server.Data
             dr["Folio"] = 1;
             dr["Amount"] = "$344";
             dt.Rows.Add(dr);
-
-            dr["Code"] = "1860-State Sales Tax";
-            dr["Date"] = DateTime.Now.Date.ToString();
-            dr["Time"] = DateTime.Now.TimeOfDay.ToString();
-            dr["TransactionType"] = "Taxes";
-            dr["RoomId"] = 310;
-            dr["ReservationId"] = 0000000524931;
-            dr["GuestName"] = "FVS,FVS";
-            dr["Name"] = "1860-State Sales Tax Subtotal:";
-            dr["Folio"] = 1;
-            dr["Amount"] = "$26.66";
-            dt.Rows.Add(dr);
+            DataRow dr1 = dt.NewRow();
+            dr1["Code"] = "1860-State Sales Tax";
+            dr1["Date"] = DateTime.Now.Date.ToString();
+            dr1["Time"] = DateTime.Now.TimeOfDay.ToString();
+            dr1["TransactionType"] = "Taxes";
+            dr1["RoomId"] = 310;
+            dr1["ReservationId"] = 0000000524931;
+            dr1["GuestName"] = "FVS,FVS";
+            dr1["Name"] = "1860-State Sales Tax Subtotal:";
+            dr1["Folio"] = 1;
+            dr1["Amount"] = "$26.66";
+            dt.Rows.Add(dr1);
 
             return (dt);
 

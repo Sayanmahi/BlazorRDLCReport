@@ -49,13 +49,18 @@ namespace BlazorRDLCReport.Server.Controllers
         public IActionResult GetCharges()
         {
             var dt = new DataTable();
+            string mimeType = "";
+            int extension = 1;
             dt = _wyndhamService.Charges();
-            var path = $"{this._webHostEnvironment.WebRootPath}\\Reports\\ReportMain.rdlc";
+            var path = $"{this._webHostEnvironment.WebRootPath}\\Reports\\ReportSub.rdlc";
             LocalReport report = new LocalReport(path);
             report.AddDataSource(dataSetName: "dbMain", dt);
+            Dictionary<string, string> parameter = new Dictionary<string, string>();
+            parameter.Add("params", "RDLC Report in Blazor web Assembly");
+            parameter.Add("Code", "FGH");
+            var result = report.Execute(RenderType.Pdf, extension,parameter, mimeType);
+            return (File(result.MainStream, contentType: "application/pdf"));
 
-            
-            return Ok(dt);
         }
         void SubReportProcessing()
         {
