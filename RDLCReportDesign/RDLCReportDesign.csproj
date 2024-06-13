@@ -67,6 +67,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSets\dbMain.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbMain.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsEmployee.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -90,6 +95,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="ReportMain.rdlc" />
+    <EmbeddedResource Include="ReportSub.rdlc" />
+    <None Include="DataSets\dbMain.xsc">
+      <DependentUpon>dbMain.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dbMain.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbMain.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\dbMain.xss">
+      <DependentUpon>dbMain.xsd</DependentUpon>
+    </None>
     <None Include="dsEmployee.xsc">
       <DependentUpon>dsEmployee.xsd</DependentUpon>
     </None>

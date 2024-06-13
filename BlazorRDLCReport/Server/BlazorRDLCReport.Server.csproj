@@ -7,14 +7,25 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\Reports\dbMain.Designer.cs" />
+    <Content Remove="wwwroot\Reports\dbMain.xsc" />
+    <Content Remove="wwwroot\Reports\dbMain.xsd" />
+    <Content Remove="wwwroot\Reports\dbMain.xss" />
     <Content Remove="wwwroot\Reports\dsEmployee.Designer.cs" />
     <Content Remove="wwwroot\Reports\dsEmployee.xsc" />
     <Content Remove="wwwroot\Reports\dsEmployee.xsd" />
     <Content Remove="wwwroot\Reports\dsEmployee.xss" />
     <Content Remove="wwwroot\Reports\Report1.rdlc" />
+    <Content Remove="wwwroot\Reports\ReportMain.rdlc" />
+    <Content Remove="wwwroot\Reports\ReportSub.rdlc" />
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="wwwroot\Reports\dbMain.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dbMain.xsd</DependentUpon>
+    </Compile>
     <Compile Include="wwwroot\Reports\dsEmployee.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -24,6 +35,8 @@
 
   <ItemGroup>
     <EmbeddedResource Include="wwwroot\Reports\Report1.rdlc" />
+    <EmbeddedResource Include="wwwroot\Reports\ReportMain.rdlc" />
+    <EmbeddedResource Include="wwwroot\Reports\ReportSub.rdlc" />
   </ItemGroup>
 
   <ItemGroup>
@@ -42,6 +55,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\Reports\dbMain.xsc" />
+    <None Include="wwwroot\Reports\dbMain.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dbMain.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Include="wwwroot\Reports\dbMain.xss" />
     <None Include="wwwroot\Reports\dsEmployee.xsc" />
     <None Include="wwwroot\Reports\dsEmployee.xsd">
       <SubType>Designer</SubType>
@@ -49,6 +69,22 @@
       <Generator>MSDataSetGenerator</Generator>
     </None>
     <None Include="wwwroot\Reports\dsEmployee.xss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="DataSet\dbMain.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dbMain.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="DataSet\dbMain.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dbMain.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
   </ItemGroup>
 
 

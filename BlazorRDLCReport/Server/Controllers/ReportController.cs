@@ -50,7 +50,16 @@ namespace BlazorRDLCReport.Server.Controllers
         {
             var dt = new DataTable();
             dt = _wyndhamService.Charges();
+            var path = $"{this._webHostEnvironment.WebRootPath}\\Reports\\ReportMain.rdlc";
+            LocalReport report = new LocalReport(path);
+            report.AddDataSource(dataSetName: "dbMain", dt);
+
+            
             return Ok(dt);
+        }
+        void SubReportProcessing()
+        {
+
         }
         [HttpGet("[action]")]
         public IActionResult GetPayment()
