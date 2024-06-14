@@ -41,6 +41,31 @@ namespace BlazorRDLCReport.Server.Data
             dr1["Folio"] = 1;
             dr1["Amount"] = "$26.66";
             dt.Rows.Add(dr1);
+            DataRow dr2 = dt.NewRow();
+            dr2["Code"] = "Package Amount";
+            dr2["Date"] = DateTime.Now.Date.ToString();
+            dr2["Time"] = DateTime.Now.TimeOfDay.ToString();
+            dr2["TransactionType"] = "EH Package";
+            dr2["RoomId"] = 516;
+            dr2["ReservationId"] = 0000000524924;
+            dr2["GuestName"] = "TEST,TEST";
+            dr2["Name"] = "Package Amount Subtotal:";
+            dr2["Folio"] = 1;
+            dr2["Amount"] = "$104.00";
+            dt.Rows.Add(dr2);
+
+            DataRow dr3 = dt.NewRow();
+            dr3["Code"] = "Package Amount";
+            dr3["Date"] = DateTime.Now.Date.ToString();
+            dr3["Time"] = DateTime.Now.TimeOfDay.ToString();
+            dr3["TransactionType"] = "EH Package";
+            dr3["RoomId"] = 514;
+            dr3["ReservationId"] = 0000000524927;
+            dr3["GuestName"] = "TESTING,TESTING";
+            dr3["Name"] = "Package Amount Subtotal:";
+            dr3["Folio"] = 1;
+            dr3["Amount"] = "$400.00";
+            dt.Rows.Add(dr3);
 
             return (dt);
 
@@ -71,5 +96,33 @@ namespace BlazorRDLCReport.Server.Data
             dt.Rows.Add(dr);
             return (dt);
         }
+        public DataTable SelectionCriteria()
+        {
+            DataTable dt = new DataTable();
+            dt.Columns.Add(columnName: "StartPostDate");
+            dt.Columns.Add(columnName: "EndPostDate");
+            dt.Columns.Add(columnName: "Shift");
+            dt.Columns.Add(columnName: "Operator");
+            dt.Columns.Add(columnName: "IncludeDisabled");
+            dt.Columns.Add(columnName: "LedgersToInclude");
+            dt.Columns.Add(columnName: "TransactionType");
+            dt.Columns.Add(columnName: "SortCriteria");
+            dt.Columns.Add(columnName: "SourceSystem");
+
+            DataRow dr = dt.NewRow();
+            dr["StartPostDate"] = "3/5/2023";
+            dr["EndPostDate"] = "3/5/203";
+            dr["Shift"] = "All";
+            dr["Operator"] = "All";
+            dr["IncludeDisabled"] = "No";
+            dr["LedgersToInclude"] = "All";
+            dr["TransactionType"] = "All";
+            dr["SortCriteria"] = "Transaction Type";
+            dr["SourceSystem"] = "All";
+            dt.Rows.Add(dr);
+            return (dt);
+
+        }
+
     }
 }

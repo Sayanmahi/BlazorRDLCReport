@@ -37,10 +37,12 @@ namespace BlazorRDLCReport.Server.Controllers
         }
         void SubReportProcessing(object sender,SubreportProcessingEventArgs args)
         {
-            string code= args.Parameters["Code"].ToString();
+            string code= args.Parameters["Code"].Values[0].ToString();
+            string c = "1-Accessories";
             var detailsData = new DataTable();
             detailsData = _wyndhamService.Charges();
-            ReportDataSource ds = new ReportDataSource("dbMain", detailsData);
+            var newdetails = detailsData.Select($"Code = '{code}'").CopyToDataTable();
+            ReportDataSource ds = new ReportDataSource("dbMain", newdetails);
             args.DataSources.Add(ds);
         }
     }
