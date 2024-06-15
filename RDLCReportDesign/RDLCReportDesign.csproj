@@ -72,6 +72,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbMain.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSets\dbSelection.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbSelection.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dsEmployee.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -107,6 +112,17 @@
     </None>
     <None Include="DataSets\dbMain.xss">
       <DependentUpon>dbMain.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dbSelection.xsc">
+      <DependentUpon>dbSelection.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dbSelection.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbSelection.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\dbSelection.xss">
+      <DependentUpon>dbSelection.xsd</DependentUpon>
     </None>
     <None Include="dsEmployee.xsc">
       <DependentUpon>dsEmployee.xsd</DependentUpon>

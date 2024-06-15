@@ -30,14 +30,21 @@ namespace BlazorRDLCReport.Server.Controllers
             };
             report.ReportPath = $"{this._webHostEnvironment.WebRootPath}\\Reports\\ReportMain.rdlc";
             report.SetParameters(parameter);
-
+            report.SubreportProcessing += new SubreportProcessingEventHandler(SubReportHeader);
             report.SubreportProcessing += new SubreportProcessingEventHandler(SubReportProcessing);
             var pdf = report.Render("PDF");
             return File(pdf, "application/pdf", "report." + "pdf");
         }
+        void SubReportHeader(object sender, SubreportProcessingEventArgs args)
+        {
+            var dt = new DataTable();
+            dt = _wyndhamService.SelectionCriteria();
+            ReportDataSource ds = new ReportDataSource("dbSelection",dt);
+            args.DataSources.Add(ds);
+        }
         void SubReportProcessing(object sender,SubreportProcessingEventArgs args)
         {
-            string code= args.Parameters["Code"].Values[0].ToString();
+            //string code= args.Parameters["Code"].Values[0].ToString();
             string[] c = { "1-Accessories", "1860-State Sales Tax", "Package Amount" };
             var detailsData = new DataTable();
             detailsData = _wyndhamService.Charges();

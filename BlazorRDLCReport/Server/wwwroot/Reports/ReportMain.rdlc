@@ -130,8 +130,8 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>dbMain</DataSetName>
-            <Top>0.69389in</Top>
-            <Left>2.81333in</Left>
+            <Top>1.125in</Top>
+            <Left>3.01333in</Left>
             <Height>0.25in</Height>
             <Width>1.46278in</Width>
             <Style>
@@ -140,6 +140,37 @@
               </Border>
             </Style>
           </Tablix>
+          <Subreport Name="Subreport1">
+            <ReportName>ReportSub</ReportName>
+            <Parameters>
+              <Parameter Name="Code">
+                <Value>=First(Fields!Code.Value, "dbMain")</Value>
+              </Parameter>
+            </Parameters>
+            <Top>1.41667in</Top>
+            <Left>0.31333in</Left>
+            <Height>1.14167in</Height>
+            <Width>6.80834in</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Subreport>
+          <Subreport Name="Subreport2">
+            <ReportName>ReportSubHeader</ReportName>
+            <Top>0.31944in</Top>
+            <Left>0.31333in</Left>
+            <Height>0.79167in</Height>
+            <Width>3in</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Subreport>
           <Textbox Name="Textbox2">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -147,19 +178,32 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value />
-                    <Style />
+                    <Value>Run Date: 6/17/2024 Time:3:05:22pm</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Run By: C45271</Value>
+                    <Style>
+                      <FontSize>8pt</FontSize>
+                    </Style>
                   </TextRun>
                 </TextRuns>
                 <Style />
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
-            <Top>1.01333in</Top>
+            <Top>0.05556in</Top>
             <Left>0.31333in</Left>
-            <Height>1.69167in</Height>
-            <Width>6.80834in</Width>
-            <ZIndex>1</ZIndex>
+            <Height>0.25in</Height>
+            <Width>2.55834in</Width>
+            <ZIndex>3</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -170,44 +214,22 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Subreport Name="Subreport1">
-            <ReportName>ReportSub</ReportName>
-            <Parameters>
-              <Parameter Name="Code">
-                <Value>=First(Fields!Code.Value, "dbMain")</Value>
-              </Parameter>
-            </Parameters>
-            <Top>1.01333in</Top>
-            <Left>0.31333in</Left>
-            <Height>1.69167in</Height>
-            <Width>6.80834in</Width>
-            <ZIndex>2</ZIndex>
-            <Style>
-              <Border>
-                <Style>Solid</Style>
-              </Border>
-            </Style>
-          </Subreport>
-          <Line Name="Line1">
-            <Top>0.97167in</Top>
-            <Left>0.31333in</Left>
-            <Height>0in</Height>
-            <Width>6.80834in</Width>
-            <ZIndex>3</ZIndex>
-            <Style>
-              <Border>
-                <Style>Solid</Style>
-              </Border>
-            </Style>
-          </Line>
         </ReportItems>
-        <Height>4.705in</Height>
-        <Style />
+        <Height>4.72778in</Height>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
       </Body>
       <Width>7.41278in</Width>
       <Page>
         <PageHeight>11.69in</PageHeight>
         <PageWidth>8.27in</PageWidth>
+        <LeftMargin>0.25in</LeftMargin>
+        <RightMargin>0.25in</RightMargin>
+        <TopMargin>0.25in</TopMargin>
+        <BottomMargin>0.25in</BottomMargin>
         <Style />
       </Page>
     </ReportSection>
