@@ -19,8 +19,8 @@ namespace BlazorRDLCReport.Server.Data
             dt.Columns.Add(columnName: "Amount");
             DataRow dr=dt.NewRow();
             dr["Code"] = "1-Accessories";
-            dr["Date"] = DateTime.Now.Date.ToString();
-            dr["Time"]=DateTime.Now.TimeOfDay.ToString();
+            dr["Date"] = DateTime.Today.ToString("d");
+            dr["Time"]= DateTime.Now.ToString("HH:mm:ss");
             dr["TransactionType"] = "Gift Shop";
             dr["RoomId"] = 310;
             dr["ReservationId"] = 0000000524931;
@@ -31,8 +31,8 @@ namespace BlazorRDLCReport.Server.Data
             dt.Rows.Add(dr);
             DataRow dr1 = dt.NewRow();
             dr1["Code"] = "1860-State Sales Tax";
-            dr1["Date"] = DateTime.Now.Date.ToString();
-            dr1["Time"] = DateTime.Now.TimeOfDay.ToString();
+            dr1["Date"] = DateTime.Today.ToString("d");
+            dr1["Time"] = DateTime.Now.ToString("HH:mm:ss");
             dr1["TransactionType"] = "Taxes";
             dr1["RoomId"] = 310;
             dr1["ReservationId"] = 0000000524931;
@@ -43,8 +43,8 @@ namespace BlazorRDLCReport.Server.Data
             dt.Rows.Add(dr1);
             DataRow dr2 = dt.NewRow();
             dr2["Code"] = "Package Amount";
-            dr2["Date"] = DateTime.Now.Date.ToString();
-            dr2["Time"] = DateTime.Now.TimeOfDay.ToString();
+            dr2["Date"] = DateTime.Today.ToString("d");
+            dr2["Time"] = DateTime.Now.ToString("HH:mm:ss");
             dr2["TransactionType"] = "EH Package";
             dr2["RoomId"] = 516;
             dr2["ReservationId"] = 0000000524924;
@@ -56,8 +56,8 @@ namespace BlazorRDLCReport.Server.Data
 
             DataRow dr3 = dt.NewRow();
             dr3["Code"] = "Package Amount";
-            dr3["Date"] = DateTime.Now.Date.ToString();
-            dr3["Time"] = DateTime.Now.TimeOfDay.ToString();
+            dr3["Date"] = DateTime.Today.ToString("d");
+            dr3["Time"] = DateTime.Now.ToString("HH:mm:ss");
             dr3["TransactionType"] = "EH Package";
             dr3["RoomId"] = 514;
             dr3["ReservationId"] = 0000000524927;

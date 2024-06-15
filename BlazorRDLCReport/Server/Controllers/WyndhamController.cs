@@ -38,11 +38,32 @@ namespace BlazorRDLCReport.Server.Controllers
         void SubReportProcessing(object sender,SubreportProcessingEventArgs args)
         {
             string code= args.Parameters["Code"].Values[0].ToString();
-            string c = "1-Accessories";
+            string[] c = { "1-Accessories", "1860-State Sales Tax", "Package Amount" };
             var detailsData = new DataTable();
             detailsData = _wyndhamService.Charges();
-            var newdetails = detailsData.Select($"Code = '{code}'").CopyToDataTable();
-            ReportDataSource ds = new ReportDataSource("dbMain", newdetails);
+            DataTable dt = new DataTable();
+            dt.Columns.Add(columnName: "Code");
+            dt.Columns.Add(columnName: "Date");
+            dt.Columns.Add(columnName: "Time");
+            dt.Columns.Add(columnName: "TransactionType");
+            dt.Columns.Add(columnName: "RoomId");
+            dt.Columns.Add(columnName: "ReservationId");
+            dt.Columns.Add(columnName: "GuestName");
+            dt.Columns.Add(columnName: "Name");
+            dt.Columns.Add(columnName: "Folio");
+            dt.Columns.Add(columnName: "Amount");
+            foreach (var i in c)
+            {
+                var newdetails1 = detailsData.Select($"Code = '{i}'").CopyToDataTable();
+                foreach (DataRow row in newdetails1.Rows)
+                {
+                    DataRow newRow = dt.NewRow();
+                    newRow.ItemArray = row.ItemArray;
+                    dt.Rows.Add(newRow);
+                }
+            }
+            //var newdetails = detailsData.Select($"Code = '{code}'").CopyToDataTable();
+            ReportDataSource ds = new ReportDataSource("dbMain", dt);
             args.DataSources.Add(ds);
         }
     }
