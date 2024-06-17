@@ -35,12 +35,64 @@ namespace BlazorRDLCReport.Server.Controllers
             var pdf = report.Render("PDF");
             return File(pdf, "application/pdf", "report." + "pdf");
         }
+        void SubReportBody(object sender, SubreportProcessingEventArgs e)
+        {
+            string[] c = { "1-Accessories", "1860-State Sales Tax", "Package Amount" };
+            string[] subTotal = { "$344.00", "$26.66", "$504.00" };
+            var dt = new DataTable();
+            dt.Columns.Add(columnName:"Transcode");
+            dt.Columns.Add(columnName: "SubTotal");
+            int p = 0;
+            foreach (var i in c)
+            {
+                using var report = new LocalReport();
+                DataRow dr = dt.NewRow();
+                dr["Transcode"] = i;
+                dr["SubTotal"] = subTotal[p];
+                dt.Rows.Add(dr);
+                DataTable dd = new DataTable();
+                dd = dt;
+                p = p + 1;
+                ReportDataSource ds = new ReportDataSource("dbSubReportBody", dd);
+                e.DataSources.Add(ds);
+                report.SubreportProcessing += new SubreportProcessingEventHandler(demosubsubreport);
+
+            }
+
+        }
+        void demosubsubreport(object sender, SubreportProcessingEventArgs args)
+        {
+            var detailsData = new DataTable();
+            detailsData = _wyndhamService.Charges();
+            DataTable dt = new DataTable();
+            dt.Columns.Add(columnName: "Code");
+            dt.Columns.Add(columnName: "Date");
+            dt.Columns.Add(columnName: "Time");
+            dt.Columns.Add(columnName: "TransactionType");
+            dt.Columns.Add(columnName: "RoomId");
+            dt.Columns.Add(columnName: "ReservationId");
+            dt.Columns.Add(columnName: "GuestName");
+            dt.Columns.Add(columnName: "Name");
+            dt.Columns.Add(columnName: "Folio");
+            dt.Columns.Add(columnName: "Amount");
+            string code = args.Parameters["Code"].Values[0].ToString();
+            var newdetails1 = detailsData.Select($"Code = '{code}'").CopyToDataTable();
+            foreach (DataRow row in newdetails1.Rows)
+            {
+                DataRow newRow = dt.NewRow();
+                newRow.ItemArray = row.ItemArray;
+                dt.Rows.Add(newRow);
+            }
+            ReportDataSource ds = new ReportDataSource("dbMain", dt);
+            args.DataSources.Add(ds);
+        }
         void SubReportHeader(object sender, SubreportProcessingEventArgs args)
         {
             var dt = new DataTable();
             dt = _wyndhamService.SelectionCriteria();
             ReportDataSource ds = new ReportDataSource("dbSelection",dt);
             args.DataSources.Add(ds);
+
         }
         void SubReportProcessing(object sender,SubreportProcessingEventArgs args)
         {
