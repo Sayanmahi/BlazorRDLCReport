@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dbAnother" targetNamespace="http://tempuri.org/dbAnother.xsd" xmlns:mstns="http://tempuri.org/dbAnother.xsd" xmlns="http://tempuri.org/dbAnother.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dbAnother" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="dbAnother" msprop:Generator_DataSetName="dbAnother">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dbAnother" msprop:Generator_RowEvHandlerName="dbAnotherRowChangeEventHandler" msprop:Generator_RowDeletedName="dbAnotherRowDeleted" msprop:Generator_RowDeletingName="dbAnotherRowDeleting" msprop:Generator_RowEvArgName="dbAnotherRowChangeEvent" msprop:Generator_TablePropName="_dbAnother" msprop:Generator_RowChangedName="dbAnotherRowChanged" msprop:Generator_RowChangingName="dbAnotherRowChanging" msprop:Generator_TableClassName="dbAnotherDataTable" msprop:Generator_RowClassName="dbAnotherRow" msprop:Generator_TableVarName="tabledbAnother" msprop:Generator_UserTableName="dbAnother">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TransCode" msprop:Generator_ColumnPropNameInRow="TransCode" msprop:Generator_ColumnPropNameInTable="TransCodeColumn" msprop:Generator_ColumnVarNameInTable="columnTransCode" msprop:Generator_UserColumnName="TransCode" type="xs:string" minOccurs="0" />
+              <xs:element name="SumTotal" msprop:Generator_ColumnPropNameInRow="SumTotal" msprop:Generator_ColumnPropNameInTable="SumTotalColumn" msprop:Generator_ColumnVarNameInTable="columnSumTotal" msprop:Generator_UserColumnName="SumTotal" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

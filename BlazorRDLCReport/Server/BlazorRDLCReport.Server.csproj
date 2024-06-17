@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\Reports\dbAnother.Designer.cs" />
+    <Content Remove="wwwroot\Reports\dbAnother.xsc" />
+    <Content Remove="wwwroot\Reports\dbAnother.xsd" />
+    <Content Remove="wwwroot\Reports\dbAnother.xss" />
     <Content Remove="wwwroot\Reports\dbMain.Designer.cs" />
     <Content Remove="wwwroot\Reports\dbMain.xsc" />
     <Content Remove="wwwroot\Reports\dbMain.xsd" />
@@ -26,6 +30,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="wwwroot\Reports\dbAnother.Designer.cs">
+      <DependentUpon>dbAnother.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
     <Compile Include="wwwroot\Reports\dbMain.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -67,6 +76,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\Reports\dbAnother.xsc" />
+    <None Include="wwwroot\Reports\dbAnother.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dbAnother.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Include="wwwroot\Reports\dbAnother.xss" />
     <None Include="wwwroot\Reports\dbMain.xsc" />
     <None Include="wwwroot\Reports\dbMain.xsd">
       <SubType>Designer</SubType>
@@ -91,6 +107,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="DataSet\dbAnother.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dbAnother.xsd</DependentUpon>
+    </Compile>
     <Compile Update="DataSet\dbMain.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -104,6 +125,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="DataSet\dbAnother.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dbAnother.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
     <None Update="DataSet\dbMain.xsd">
       <SubType>Designer</SubType>
       <LastGenOutput>dbMain.Designer.cs</LastGenOutput>
