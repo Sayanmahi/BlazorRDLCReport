@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dbNextSubFooter" targetNamespace="http://tempuri.org/dbNextSubFooter.xsd" xmlns:mstns="http://tempuri.org/dbNextSubFooter.xsd" xmlns="http://tempuri.org/dbNextSubFooter.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dbNextSubFooter" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="dbNextSubFooter" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dbNextSubFooter">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dbNextSubFooter" msprop:Generator_RowClassName="dbNextSubFooterRow" msprop:Generator_RowEvHandlerName="dbNextSubFooterRowChangeEventHandler" msprop:Generator_RowDeletedName="dbNextSubFooterRowDeleted" msprop:Generator_RowDeletingName="dbNextSubFooterRowDeleting" msprop:Generator_RowEvArgName="dbNextSubFooterRowChangeEvent" msprop:Generator_TablePropName="_dbNextSubFooter" msprop:Generator_RowChangedName="dbNextSubFooterRowChanged" msprop:Generator_UserTableName="dbNextSubFooter" msprop:Generator_RowChangingName="dbNextSubFooterRowChanging" msprop:Generator_TableClassName="dbNextSubFooterDataTable" msprop:Generator_TableVarName="tabledbNextSubFooter">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Reserved" msprop:Generator_ColumnPropNameInRow="Reserved" msprop:Generator_ColumnPropNameInTable="ReservedColumn" msprop:Generator_ColumnVarNameInTable="columnReserved" msprop:Generator_UserColumnName="Reserved" type="xs:string" minOccurs="0" />
+              <xs:element name="Cancelled" msprop:Generator_ColumnPropNameInRow="Cancelled" msprop:Generator_ColumnPropNameInTable="CancelledColumn" msprop:Generator_ColumnVarNameInTable="columnCancelled" msprop:Generator_UserColumnName="Cancelled" type="xs:string" minOccurs="0" />
+              <xs:element name="Inhouse" msprop:Generator_ColumnPropNameInRow="Inhouse" msprop:Generator_ColumnPropNameInTable="InhouseColumn" msprop:Generator_ColumnVarNameInTable="columnInhouse" msprop:Generator_UserColumnName="Inhouse" type="xs:string" minOccurs="0" />
+              <xs:element name="Checkedout" msprop:Generator_ColumnPropNameInRow="Checkedout" msprop:Generator_ColumnPropNameInTable="CheckedoutColumn" msprop:Generator_ColumnVarNameInTable="columnCheckedout" msprop:Generator_UserColumnName="Checkedout" type="xs:string" minOccurs="0" />
+              <xs:element name="NoShow" msprop:Generator_ColumnPropNameInRow="NoShow" msprop:Generator_ColumnPropNameInTable="NoShowColumn" msprop:Generator_ColumnVarNameInTable="columnNoShow" msprop:Generator_UserColumnName="NoShow" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

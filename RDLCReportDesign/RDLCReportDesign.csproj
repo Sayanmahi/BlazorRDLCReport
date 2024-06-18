@@ -72,10 +72,25 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbMain.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSets\dbNextSubBody.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbNextSubBody.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\dbNextSubFooter.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbNextSubFooter.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSets\dbSelection.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dbSelection.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSets\NextHeader.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NextHeader.xsd</DependentUpon>
     </Compile>
     <Compile Include="dbAnother.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -95,6 +110,10 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="NextReportMain.rdlc" />
+    <EmbeddedResource Include="NextSubFooter.rdlc" />
+    <EmbeddedResource Include="NextSubHeader.rdlc" />
+    <EmbeddedResource Include="NextSubTable.rdlc" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -118,6 +137,28 @@
     <None Include="DataSets\dbMain.xss">
       <DependentUpon>dbMain.xsd</DependentUpon>
     </None>
+    <None Include="DataSets\dbNextSubBody.xsc">
+      <DependentUpon>dbNextSubBody.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dbNextSubBody.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbNextSubBody.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\dbNextSubBody.xss">
+      <DependentUpon>dbNextSubBody.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dbNextSubFooter.xsc">
+      <DependentUpon>dbNextSubFooter.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\dbNextSubFooter.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbNextSubFooter.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\dbNextSubFooter.xss">
+      <DependentUpon>dbNextSubFooter.xsd</DependentUpon>
+    </None>
     <None Include="DataSets\dbSelection.xsc">
       <DependentUpon>dbSelection.xsd</DependentUpon>
     </None>
@@ -128,6 +169,17 @@
     </None>
     <None Include="DataSets\dbSelection.xss">
       <DependentUpon>dbSelection.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\NextHeader.xsc">
+      <DependentUpon>NextHeader.xsd</DependentUpon>
+    </None>
+    <None Include="DataSets\NextHeader.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>NextHeader.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSets\NextHeader.xss">
+      <DependentUpon>NextHeader.xsd</DependentUpon>
     </None>
     <None Include="dbAnother.xsc">
       <DependentUpon>dbAnother.xsd</DependentUpon>

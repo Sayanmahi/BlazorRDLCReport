@@ -15,6 +15,14 @@
     <Content Remove="wwwroot\Reports\dbMain.xsc" />
     <Content Remove="wwwroot\Reports\dbMain.xsd" />
     <Content Remove="wwwroot\Reports\dbMain.xss" />
+    <Content Remove="wwwroot\Reports\dbNextSubBody.Designer.cs" />
+    <Content Remove="wwwroot\Reports\dbNextSubBody.xsc" />
+    <Content Remove="wwwroot\Reports\dbNextSubBody.xsd" />
+    <Content Remove="wwwroot\Reports\dbNextSubBody.xss" />
+    <Content Remove="wwwroot\Reports\dbNextSubFooter.Designer.cs" />
+    <Content Remove="wwwroot\Reports\dbNextSubFooter.xsc" />
+    <Content Remove="wwwroot\Reports\dbNextSubFooter.xsd" />
+    <Content Remove="wwwroot\Reports\dbNextSubFooter.xss" />
     <Content Remove="wwwroot\Reports\dbSelection.Designer.cs" />
     <Content Remove="wwwroot\Reports\dbSelection.xsc" />
     <Content Remove="wwwroot\Reports\dbSelection.xsd" />
@@ -23,6 +31,14 @@
     <Content Remove="wwwroot\Reports\dsEmployee.xsc" />
     <Content Remove="wwwroot\Reports\dsEmployee.xsd" />
     <Content Remove="wwwroot\Reports\dsEmployee.xss" />
+    <Content Remove="wwwroot\Reports\NextHeader.Designer.cs" />
+    <Content Remove="wwwroot\Reports\NextHeader.xsc" />
+    <Content Remove="wwwroot\Reports\NextHeader.xsd" />
+    <Content Remove="wwwroot\Reports\NextHeader.xss" />
+    <Content Remove="wwwroot\Reports\NextReportMain.rdlc" />
+    <Content Remove="wwwroot\Reports\NextSubFooter.rdlc" />
+    <Content Remove="wwwroot\Reports\NextSubHeader.rdlc" />
+    <Content Remove="wwwroot\Reports\NextSubTable.rdlc" />
     <Content Remove="wwwroot\Reports\Report1.rdlc" />
     <Content Remove="wwwroot\Reports\ReportMain.rdlc" />
     <Content Remove="wwwroot\Reports\ReportSub.rdlc" />
@@ -40,6 +56,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>dbMain.xsd</DependentUpon>
     </Compile>
+    <Compile Include="wwwroot\Reports\dbNextSubBody.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dbNextSubBody.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="wwwroot\Reports\dbNextSubFooter.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dbNextSubFooter.xsd</DependentUpon>
+    </Compile>
     <Compile Include="wwwroot\Reports\dbSelection.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -50,9 +76,18 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>dsEmployee.xsd</DependentUpon>
     </Compile>
+    <Compile Include="wwwroot\Reports\NextHeader.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>NextHeader.xsd</DependentUpon>
+    </Compile>
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="wwwroot\Reports\NextReportMain.rdlc" />
+    <EmbeddedResource Include="wwwroot\Reports\NextSubFooter.rdlc" />
+    <EmbeddedResource Include="wwwroot\Reports\NextSubHeader.rdlc" />
+    <EmbeddedResource Include="wwwroot\Reports\NextSubTable.rdlc" />
     <EmbeddedResource Include="wwwroot\Reports\Report1.rdlc" />
     <EmbeddedResource Include="wwwroot\Reports\ReportMain.rdlc" />
     <EmbeddedResource Include="wwwroot\Reports\ReportSubHeader.rdlc" />
@@ -90,6 +125,20 @@
       <Generator>MSDataSetGenerator</Generator>
     </None>
     <None Include="wwwroot\Reports\dbMain.xss" />
+    <None Include="wwwroot\Reports\dbNextSubBody.xsc" />
+    <None Include="wwwroot\Reports\dbNextSubBody.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dbNextSubBody.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Include="wwwroot\Reports\dbNextSubBody.xss" />
+    <None Include="wwwroot\Reports\dbNextSubFooter.xsc" />
+    <None Include="wwwroot\Reports\dbNextSubFooter.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>dbNextSubFooter.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Include="wwwroot\Reports\dbNextSubFooter.xss" />
     <None Include="wwwroot\Reports\dbSelection.xsc" />
     <None Include="wwwroot\Reports\dbSelection.xsd">
       <SubType>Designer</SubType>
@@ -104,6 +153,13 @@
       <Generator>MSDataSetGenerator</Generator>
     </None>
     <None Include="wwwroot\Reports\dsEmployee.xss" />
+    <None Include="wwwroot\Reports\NextHeader.xsc" />
+    <None Include="wwwroot\Reports\NextHeader.xsd">
+      <SubType>Designer</SubType>
+      <LastGenOutput>NextHeader.Designer.cs</LastGenOutput>
+      <Generator>MSDataSetGenerator</Generator>
+    </None>
+    <None Include="wwwroot\Reports\NextHeader.xss" />
   </ItemGroup>
 
   <ItemGroup>

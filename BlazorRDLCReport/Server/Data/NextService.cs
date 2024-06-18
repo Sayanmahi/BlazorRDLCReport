@@ -26,7 +26,7 @@ namespace BlazorRDLCReport.Server.Data
             dt.Columns.Add("RunBy");
             DataRow dr = dt.NewRow();
             dr["ArrivalBeginDate"]= DateTime.Today.ToString("d");
-            dr["ArrivalEndDate"]= DateTime.Today.ToString("d");
+            dr["ArrivalEndDate"]= DateTime.Now.ToString("HH:mm:ss");
             dr["Guesttype"] = "All";
             dr["AssociationRangeFrom"] = "";
             dr["AssociationRangeTo"] = "";
@@ -42,7 +42,7 @@ namespace BlazorRDLCReport.Server.Data
             dr["Building"] = "";
             dr["Notourflag"] = "All";
             dr["RunBy"] = "C45271";
-            dt.Rows.Add();
+            dt.Rows.Add(dr);
             return (dt);
 
         }
@@ -74,7 +74,7 @@ namespace BlazorRDLCReport.Server.Data
             dr["Acct"] = "00203244839";
             dr["StartDate"]= DateTime.Today.ToString("d");
             dr["EndDate"] = "";
-            dr["ArrivalTime"]= DateTime.Now.TimeOfDay.ToString();
+            dr["ArrivalTime"]= DateTime.Now.ToString("HH:mm:ss");
             dr["Status"] = "Reserved";
             dr["Room"] = "";
             dr["unitType"] = "1 Bedroom Deluxe";
@@ -95,7 +95,7 @@ namespace BlazorRDLCReport.Server.Data
             dr1["Acct"] = "00010036810";
             dr1["StartDate"] = DateTime.Today.ToString("d");
             dr1["EndDate"] = DateTime.Today.ToString("d");
-            dr1["ArrivalTime"] = DateTime.Now.TimeOfDay.ToString();
+            dr1["ArrivalTime"] = DateTime.Now.ToString("HH:mm:ss");
             dr1["Status"] = "In-House";
             dr1["Room"] = "295";
             dr1["unitType"] = "1 Bedroom Deluxe";
@@ -114,8 +114,8 @@ namespace BlazorRDLCReport.Server.Data
             dr2["GuestType"] = "Owner/ClubWyndham Access";
             dr2["Acct"] = "00203244839";
             dr2["StartDate"] = DateTime.Today.ToString("d");
-            dr2["EndDate"] = DateTime.Today.ToString("d");
-            dr2["ArrivalTime"] = DateTime.Now.TimeOfDay.ToString();
+            dr2["EndDate"] = DateTime.Now.ToString("HH:mm:ss");
+            dr2["ArrivalTime"] = DateTime.Now.ToString("HH:mm:ss");
             dr2["Status"] = "Reserved";
             dr2["Room"] = "";
             dr2["unitType"] = "1 Bedroom Deluxe";
@@ -135,7 +135,7 @@ namespace BlazorRDLCReport.Server.Data
             dr3["Acct"] = "3105042001";
             dr3["StartDate"] = DateTime.Today.ToString("d");
             dr3["EndDate"] = DateTime.Today.ToString("d");
-            dr3["ArrivalTime"] = DateTime.Now.TimeOfDay.ToString();
+            dr3["ArrivalTime"] = DateTime.Now.ToString("HH:mm:ss");
             dr3["Status"] = "In-House";
             dr3["Room"] = "885";
             dr3["unitType"] = "1 Bedroom Deluxe";

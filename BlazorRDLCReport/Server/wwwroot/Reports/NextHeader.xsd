@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="NextHeader" targetNamespace="http://tempuri.org/NextHeader.xsd" xmlns:mstns="http://tempuri.org/NextHeader.xsd" xmlns="http://tempuri.org/NextHeader.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="NextHeader" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="NextHeader" msprop:Generator_DataSetName="NextHeader">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="NextHeader" msprop:Generator_RowEvHandlerName="NextHeaderRowChangeEventHandler" msprop:Generator_RowDeletedName="NextHeaderRowDeleted" msprop:Generator_RowDeletingName="NextHeaderRowDeleting" msprop:Generator_RowEvArgName="NextHeaderRowChangeEvent" msprop:Generator_TablePropName="_NextHeader" msprop:Generator_RowChangedName="NextHeaderRowChanged" msprop:Generator_RowChangingName="NextHeaderRowChanging" msprop:Generator_TableClassName="NextHeaderDataTable" msprop:Generator_RowClassName="NextHeaderRow" msprop:Generator_TableVarName="tableNextHeader" msprop:Generator_UserTableName="NextHeader">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ArrivalBeginDate" msprop:Generator_ColumnPropNameInRow="ArrivalBeginDate" msprop:Generator_ColumnPropNameInTable="ArrivalBeginDateColumn" msprop:Generator_ColumnVarNameInTable="columnArrivalBeginDate" msprop:Generator_UserColumnName="ArrivalBeginDate" type="xs:string" minOccurs="0" />
+              <xs:element name="ArrivalEndDate" msprop:Generator_ColumnPropNameInRow="ArrivalEndDate" msprop:Generator_ColumnPropNameInTable="ArrivalEndDateColumn" msprop:Generator_ColumnVarNameInTable="columnArrivalEndDate" msprop:Generator_UserColumnName="ArrivalEndDate" type="xs:string" minOccurs="0" />
+              <xs:element name="Guesttype" msprop:Generator_ColumnPropNameInRow="Guesttype" msprop:Generator_ColumnPropNameInTable="GuesttypeColumn" msprop:Generator_ColumnVarNameInTable="columnGuesttype" msprop:Generator_UserColumnName="Guesttype" type="xs:string" minOccurs="0" />
+              <xs:element name="AssociationRangeFrom" msprop:Generator_ColumnPropNameInRow="AssociationRangeFrom" msprop:Generator_ColumnPropNameInTable="AssociationRangeFromColumn" msprop:Generator_ColumnVarNameInTable="columnAssociationRangeFrom" msprop:Generator_UserColumnName="AssociationRangeFrom" type="xs:string" minOccurs="0" />
+              <xs:element name="AssociationRangeTo" msprop:Generator_ColumnPropNameInRow="AssociationRangeTo" msprop:Generator_ColumnPropNameInTable="AssociationRangeToColumn" msprop:Generator_ColumnVarNameInTable="columnAssociationRangeTo" msprop:Generator_UserColumnName="AssociationRangeTo" type="xs:string" minOccurs="0" />
+              <xs:element name="GroupName" msprop:Generator_ColumnPropNameInRow="GroupName" msprop:Generator_ColumnPropNameInTable="GroupNameColumn" msprop:Generator_ColumnVarNameInTable="columnGroupName" msprop:Generator_UserColumnName="GroupName" type="xs:string" minOccurs="0" />
+              <xs:element name="VipsOnly" msprop:Generator_ColumnPropNameInRow="VipsOnly" msprop:Generator_ColumnPropNameInTable="VipsOnlyColumn" msprop:Generator_ColumnVarNameInTable="columnVipsOnly" msprop:Generator_UserColumnName="VipsOnly" type="xs:string" minOccurs="0" />
+              <xs:element name="LockoffsOnly" msprop:Generator_ColumnPropNameInRow="LockoffsOnly" msprop:Generator_ColumnPropNameInTable="LockoffsOnlyColumn" msprop:Generator_ColumnVarNameInTable="columnLockoffsOnly" msprop:Generator_UserColumnName="LockoffsOnly" type="xs:string" minOccurs="0" />
+              <xs:element name="IncludeCancels" msprop:Generator_ColumnPropNameInRow="IncludeCancels" msprop:Generator_ColumnPropNameInTable="IncludeCancelsColumn" msprop:Generator_ColumnVarNameInTable="columnIncludeCancels" msprop:Generator_UserColumnName="IncludeCancels" type="xs:string" minOccurs="0" />
+              <xs:element name="Priority1Only" msprop:Generator_ColumnPropNameInRow="Priority1Only" msprop:Generator_ColumnPropNameInTable="Priority1OnlyColumn" msprop:Generator_ColumnVarNameInTable="columnPriority1Only" msprop:Generator_UserColumnName="Priority1Only" type="xs:string" minOccurs="0" />
+              <xs:element name="ResHasPreCheckinupdates" msprop:Generator_ColumnPropNameInRow="ResHasPreCheckinupdates" msprop:Generator_ColumnPropNameInTable="ResHasPreCheckinupdatesColumn" msprop:Generator_ColumnVarNameInTable="columnResHasPreCheckinupdates" msprop:Generator_UserColumnName="ResHasPreCheckinupdates" type="xs:string" minOccurs="0" />
+              <xs:element name="Excludeinhouse" msprop:Generator_ColumnPropNameInRow="Excludeinhouse" msprop:Generator_ColumnPropNameInTable="ExcludeinhouseColumn" msprop:Generator_ColumnVarNameInTable="columnExcludeinhouse" msprop:Generator_UserColumnName="Excludeinhouse" type="xs:string" minOccurs="0" />
+              <xs:element name="Club" msprop:Generator_ColumnPropNameInRow="Club" msprop:Generator_ColumnPropNameInTable="ClubColumn" msprop:Generator_ColumnVarNameInTable="columnClub" msprop:Generator_UserColumnName="Club" type="xs:string" minOccurs="0" />
+              <xs:element name="Sortcriteria" msprop:Generator_ColumnPropNameInRow="Sortcriteria" msprop:Generator_ColumnPropNameInTable="SortcriteriaColumn" msprop:Generator_ColumnVarNameInTable="columnSortcriteria" msprop:Generator_UserColumnName="Sortcriteria" type="xs:string" minOccurs="0" />
+              <xs:element name="Building" msprop:Generator_ColumnPropNameInRow="Building" msprop:Generator_ColumnPropNameInTable="BuildingColumn" msprop:Generator_ColumnVarNameInTable="columnBuilding" msprop:Generator_UserColumnName="Building" type="xs:string" minOccurs="0" />
+              <xs:element name="Notourflag" msprop:Generator_ColumnPropNameInRow="Notourflag" msprop:Generator_ColumnPropNameInTable="NotourflagColumn" msprop:Generator_ColumnVarNameInTable="columnNotourflag" msprop:Generator_UserColumnName="Notourflag" type="xs:string" minOccurs="0" />
+              <xs:element name="RunBy" msprop:Generator_ColumnPropNameInRow="RunBy" msprop:Generator_ColumnPropNameInTable="RunByColumn" msprop:Generator_ColumnVarNameInTable="columnRunBy" msprop:Generator_UserColumnName="RunBy" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -13,6 +13,7 @@ namespace BlazorRDLCReport.Server.Controllers
     {
         private readonly IWebHostEnvironment _webHostEnvironment;
         private readonly WyndhamService _wyndhamService = new WyndhamService();
+        private readonly NextService _nextService = new NextService();
         public WyndhamController(IWebHostEnvironment _webHostEnvironment)
         {
             this._webHostEnvironment = _webHostEnvironment;
@@ -149,6 +150,38 @@ namespace BlazorRDLCReport.Server.Controllers
 
             }
 
+        }
+        [HttpGet("[action]")]
+        public IActionResult NextReport()
+        {
+            using var report = new LocalReport();
+            report.ReportPath = $"{this._webHostEnvironment.WebRootPath}\\Reports\\NextReportMain.rdlc";
+            report.SubreportProcessing += new SubreportProcessingEventHandler(Nextsubheader);
+            report.SubreportProcessing += new SubreportProcessingEventHandler(Nextsubbody);
+            report.SubreportProcessing += new SubreportProcessingEventHandler(Nextsubfooter);
+            var pdf = report.Render("PDF");
+            return File(pdf, "application/pdf", "report." + "pdf");
+        }
+        void Nextsubheader(object sender, SubreportProcessingEventArgs e)
+        {
+            var detailsData = new DataTable();
+            detailsData = _nextService.Headerfunc();
+            ReportDataSource ds = new ReportDataSource("NextHeader", detailsData);
+            e.DataSources.Add(ds);
+        }
+        void Nextsubbody(object sender, SubreportProcessingEventArgs e)
+        {
+            var detailsData = new DataTable();
+            detailsData = _nextService.BodyPart();
+            ReportDataSource ds = new ReportDataSource("dbNextSubBody", detailsData);
+            e.DataSources.Add(ds);
+        }
+        void Nextsubfooter(object sender, SubreportProcessingEventArgs e)
+        {
+            var detailsData = new DataTable();
+            detailsData = _nextService.Footerfunc();
+            ReportDataSource ds = new ReportDataSource("dbNextSubFooter", detailsData);
+            e.DataSources.Add(ds);
         }
     }
 }
