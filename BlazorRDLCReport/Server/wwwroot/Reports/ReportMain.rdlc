@@ -161,7 +161,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>dbMain</DataSetName>
-            <Top>1.125in</Top>
+            <Top>1.19167in</Top>
             <Left>3.01333in</Left>
             <Height>0.25in</Height>
             <Width>1.46278in</Width>
@@ -231,13 +231,13 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>2.30278in</Width>
+                  <Width>2.625in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.30278in</Width>
+                  <Width>2.625in</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>2.30278in</Width>
+                  <Width>2.625in</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -325,7 +325,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value xml:space="preserve">                                                                                                               </Value>
+                                  <Value xml:space="preserve">                                                                                                                                  </Value>
                                   <Style />
                                 </TextRun>
                                 <TextRun>
@@ -390,10 +390,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>dbAnother</DataSetName>
-            <Top>1.44444in</Top>
-            <Left>0.31333in</Left>
+            <Top>1.87444in</Top>
+            <Left>0.11333in</Left>
             <Height>0.73334in</Height>
-            <Width>6.90834in</Width>
+            <Width>7.875in</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -402,10 +402,76 @@
             </Style>
           </Tablix>
           <Line Name="Line1">
-            <Top>1.375in</Top>
+            <Top>1.48334in</Top>
             <Height>0in</Height>
-            <Width>8.11333in</Width>
+            <Width>7.98833in</Width>
             <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line2">
+            <Top>1.805in</Top>
+            <Height>0in</Height>
+            <Width>7.98833in</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox4">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Transaction Date/Time  Transaction Type   Room#  Reservation #  Guest Name   CL Account #    Name    Folio#        Amount</Value>
+                    <Style>
+                      <FontSize>9pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style />
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox4</rd:DefaultName>
+            <Top>1.525in</Top>
+            <Left>0.11333in</Left>
+            <Height>0.23833in</Height>
+            <Width>7.875in</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line3">
+            <Top>1.11333in</Top>
+            <Height>0in</Height>
+            <Width>7.98833in</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line4">
+            <Left>7.98833in</Left>
+            <Height>2.71945in</Height>
+            <Width>0in</Width>
+            <ZIndex>8</ZIndex>
             <Style>
               <Border>
                 <Style>Solid</Style>
