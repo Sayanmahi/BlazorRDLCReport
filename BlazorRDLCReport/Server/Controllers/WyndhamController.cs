@@ -30,7 +30,11 @@ namespace BlazorRDLCReport.Server.Controllers
             };
             report.ReportPath = $"{this._webHostEnvironment.WebRootPath}\\Reports\\ReportMain.rdlc";
             report.SetParameters(parameter);
-            
+            var dat = new DataTable();
+            dat.Columns.Add("PostedBy");
+            DataRow dp = dat.NewRow();
+            dp["PostedBy"] = "C45271";
+
             var dt = new DataTable();
             dt.Columns.Add(columnName: "Transcode");
             dt.Columns.Add(columnName: "SumTotal");
